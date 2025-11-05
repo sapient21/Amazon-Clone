@@ -105,8 +105,12 @@ document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
     link.addEventListener('click', () => {
       const productId = link.dataset.productId;
-      removeFromCart(productId);
-      console.log(cart);
+      removeFromCart(productId);  
+      
+      const container = document.querySelector(
+        `.js-cart-item-container-${productId}`
+      );
+      container.remove();
       
     });
   });
