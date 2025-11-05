@@ -1,6 +1,10 @@
 import { cart, removeFromCart } from "../data/cart.js";
 import { products } from "../data/products.js";
+<<<<<<< HEAD
 import { formatCurrnency } from "../scripts/utils/money.js";
+=======
+import { formatcurrency } from "./utils/money.js";
+>>>>>>> redirect-1
 
 let cartSummaryHTML = '';
 
@@ -31,7 +35,11 @@ cartSummaryHTML += `
                   ${matchingProduct.name}
                 </div>
                 <div class="product-price">
+<<<<<<< HEAD
                   $${(formatCurrnency(matchingProduct.priceCents)) }
+=======
+                  $${formatcurrency(matchingProduct.priceCents) }
+>>>>>>> redirect-1
                 </div>
                 <div class="product-quantity">
                   <span>

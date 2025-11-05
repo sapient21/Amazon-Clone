@@ -1,6 +1,10 @@
 import { cart, addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
+<<<<<<< HEAD
 import { formatCurrnency } from "./utils/money.js";
+=======
+import { formatcurrency } from "./utils/money.js";
+>>>>>>> redirect-1
 
 let productsHTML = "";
 
@@ -25,7 +29,11 @@ products.forEach((product) => {
           </div>
 
           <div class="product-price">
+<<<<<<< HEAD
             $${formatCurrnency(product.priceCents)}
+=======
+            $${formatcurrency(product.priceCents)}
+>>>>>>> redirect-1
           </div>
 
           <div class="product-quantity-container">
