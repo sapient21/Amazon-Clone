@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export function formatCurrnency(priceCents) {
+export function formatCurrency(priceCents) {
     (priceCents / 100).toFixed(2);
-=======
-export function formatcurrency(priceCents) {
-    return (priceCents / 100).toFixed(2)
->>>>>>> redirect-1
 }

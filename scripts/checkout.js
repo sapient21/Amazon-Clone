@@ -1,10 +1,7 @@
 import { cart, removeFromCart } from "../data/cart.js";
 import { products } from "../data/products.js";
-<<<<<<< HEAD
-import { formatCurrnency } from "../scripts/utils/money.js";
-=======
-import { formatcurrency } from "./utils/money.js";
->>>>>>> redirect-1
+import { formatCurrency } from "./utils/money.js";
+
 
 let cartSummaryHTML = '';
 
@@ -13,12 +10,13 @@ cart.forEach((cartItem) => {
 
     let matchingProduct ;
 
+    
     products.forEach((product) => {
-        if (product.id === productId) {
-            matchingProduct = product;
-        };
+      if (product.id === productId) {
+        matchingProduct = product;
+      };
     });
-
+  
 cartSummaryHTML += `
     <div class="cart-item-container 
     js-cart-item-container-${matchingProduct.id}">
@@ -35,11 +33,7 @@ cartSummaryHTML += `
                   ${matchingProduct.name}
                 </div>
                 <div class="product-price">
-<<<<<<< HEAD
-                  $${(formatCurrnency(matchingProduct.priceCents)) }
-=======
-                  $${formatcurrency(matchingProduct.priceCents) }
->>>>>>> redirect-1
+                  $${(formatCurrency(matchingProduct.priceCents)) }
                 </div>
                 <div class="product-quantity">
                   <span>
@@ -61,7 +55,7 @@ cartSummaryHTML += `
                 <div class="delivery-option">
                   <input type="radio" checked
                     class="delivery-option-input"
-                    name="delivery-option-${productId}">
+                    name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
                       Tuesday, June 21
@@ -74,7 +68,7 @@ cartSummaryHTML += `
                 <div class="delivery-option">
                   <input type="radio"
                     class="delivery-option-input"
-                    name="delivery-option-${productId}">
+                    name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
                       Wednesday, June 15
@@ -87,7 +81,7 @@ cartSummaryHTML += `
                 <div class="delivery-option">
                   <input type="radio"
                     class="delivery-option-input"
-                    name="delivery-option-${productId}">
+                    name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
                       Monday, June 13
