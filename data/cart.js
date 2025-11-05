@@ -7,9 +7,6 @@ export let cart = [{
     quantity: 1,
   }];
 
-function saveToStorage() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
 
 export function addToCart(productId) {
   let matchingItem;
@@ -28,19 +25,17 @@ export function addToCart(productId) {
       quantity: 1,
     });
   }
-  saveToStorage();
 }
 
+
 export function removeFromCart(productId) {
-  const newCart = [];
+  const newCart = []
 
   cart.forEach((cartItem) => {
     if (cartItem.productId !== productId) {
-      newCart.push(cartItem);
-    }
+      newCart.push(cartItem)
+    };
   });
 
   cart = newCart;
-
-  saveToStorage();
 }
