@@ -1,7 +1,16 @@
 import { cart, removeFromCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
+import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
+import  dayjs  from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 
+hello();
+
+const today = dayjs();
+const deliveryDate = today.add(7, 'days');
+console.log(deliveryDate.format('dddd, MMMM, D'));
+
+ 
 let cartSummaryHTML = "";
 
 cart.forEach((cartItem) => {
@@ -9,10 +18,6 @@ cart.forEach((cartItem) => {
 
   let matchingProduct;
 
-  console.log("Current cart item:", cartItem);
-  console.log("Product ID from cart:", productId);
-  console.log("Products array length:", products.length);
-  console.log("Sample product check:", products[0]);
 
   products.forEach((product, index) => {
     if (!product) {
